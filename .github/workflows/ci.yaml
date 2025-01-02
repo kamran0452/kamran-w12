@@ -1,13 +1,18 @@
 name: ci-wf
 on: 
-  push:
-jobs:
+  push: 
+    branches: 
+      - develop
+  pull_request:
+    branches:
+      - develop
+jobs: 
   build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Welcome step
-        run: echo "Welcome to the Github Actions"
-      - name: Clone repo
+    runs-on: ubuntu_latest
+    steps: 
+      - name: Welcome Step
+        run: echo "Welcome to the github Actions"
+      - name: clone repo
         uses: actions/checkout@v4
       - name: Repository Informtion
         run: |
