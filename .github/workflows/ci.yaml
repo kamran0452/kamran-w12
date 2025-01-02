@@ -8,7 +8,7 @@ on:
       - develop
 jobs: 
   build:
-    runs_on: ubuntu_latest
+    runs-on: ubuntu-latest
     steps: 
       - name: Welcome Step
         run: echo "Welcome to the github Actions"
